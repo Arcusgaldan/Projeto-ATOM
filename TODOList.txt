@@ -1,0 +1,43 @@
+﻿-- RESOLVIDOS
+![V] Fazer busca em todos os CRUD
+[V] Considerar forma de adicionar backup e procedimento em computador (select com ações possiveis, botões direto no item da lista, collapse (?))
+[V] Considerar criar uma tabela para discos de backup (ex: o PC 123) para poder gerenciar espaço disponível, relatórios etc.
+[V] Fazer botão para limpar formulário (usando form.reset()) de busca
+![V] Criar Model e Controller de TBDiscoBackup
+![V] Fazer transferência de patrimônio entre setores
+![V] Adicionar opção de escolher um item/computador por patrimônio para "copiar" seu cadastro (para múltiplos itens iguais)
+![V] Colocar checkbox em todas as listas para facilitar ações em lote
+[V] Adicionar funcionalidade de apertar enter para enviar formulários
+[V] Implementar sistema de log para todas as ações (ID do usuario, nome da tabela, operação, data e mudanças);
+[V] Corrigir enter em formulários para abranger selects também (e trocar o dropdown por algum outro botão que não o enter)
+[V] Adicionar campo "Ativo" a TBItem para poder descartar itens sem excluí-los do banco
+[V] Aplicar modelo de criptografia
+![V] Melhorar interface para cadastro de computador junto a cadastro de item
+[V] Considerar criar uma tabela de locais para setor
+[V] Verificar e corrigir bug de dois modais abertos ao mesmo tempo causando o scroll a não funcionar corretamente (classe modal-open no body) //Resolvido com script direto no HTML, com a classe modal-open no body
+[V] Adicionar erro para tentativa de duplicar campo único //Adicionado o erro 418 para duplicata.
+[V] Colocar order by alfabético nas funções de listar
+[V] Permitir cadastro de nome de coordenador de local
+![V] Permitir cadastro de item sem patrimônio (só para sair no relatório da unidade) //Tirar o Unique do campo, adicionar checkbox "Sem Patrimônio" no form, cadastrar como 000000 e puxar no relatório se for 000000 colocar S/P ou Sem Patrimônio.
+[V] Paginar relatório
+[V] Realçar campos obrigatórios
+![V] Configurar política de backup do banco de dados //Usar agendador de tarefas para a cada 24h executar um mysqldump
+
+-- PENDENTES
+[-] Fazer validação campo-a-campo em todos os formulários
+[-] Considerar paginação para listagens //Adicionar variável "tabelaAtual" em cada Listar, criar uma constante "tamanhoPagina" no utils. 
+[-] Adicionar campo "excluído" à tabela de backup para excluir backups antigos sem perder seu registro e continuar calculando espaço disponível em disco
+[-] Adicionar campo IP em computador
+[-] Ao finalizar CRUD's, iniciar gráficos e estatísticas na página inicial do sistema.
+[-] Permitir cadastrar itens/computadores baseado num range de patrimonio (ex: 205599 - 205619)
+[-] Criar controllers e models de placa-mãe, adicionar ao formulário de computador
+[-] Estudar defesas para SQL Injection
+[-] Estudar melhoramento para log de transferência em lote (usar laço)
+[-] Fazer caixa de confirmação antes de mostrar modal de cadastro de PC após cadastro de item
+[-] Implementar unificação de itens duplicados ou validação se já existe aquele tipo de item com aquele patrimônio
+[-] Finalizar transferência de computador (singular e lote)
+
+-- EM ANDAMENTO
+                                                                                                      
+-- ABORTADOS
+[X] Considerar criar um campo "motivo" em TBLogTransferencia //Ia ficar cansativo para várias transações em seguida
